@@ -15,19 +15,19 @@ import img12 from '@/assets/专辑/p12.jpg';
 import img13 from '@/assets/专辑/p13.jpg';
 
 const carouselItems = [
-  { img: img1 },
-  { img: img2 },
-  { img: img3 },
-  { img: img4 },
-  { img: img5 },
-  { img: img6 },
-  { img: img7 },
-  { img: img8 },
-  { img: img9 },
-  { img: img10 },
-  { img: img11 },
-  { img: img12 },
-  { img: img13 },
+  {img: img1},
+  {img: img2},
+  {img: img3},
+  {img: img4},
+  {img: img5},
+  {img: img6},
+  {img: img7},
+  {img: img8},
+  {img: img9},
+  {img: img10},
+  {img: img11},
+  {img: img12},
+  {img: img13},
 ];
 
 </script>
@@ -37,7 +37,7 @@ const carouselItems = [
   <div class="carousel-container">
     <el-carousel :interval=5000 autoplay arrow="always" direction="horizontal" type="card">
       <el-carousel-item v-for="item in carouselItems" :key="item">
-        <el-image :src="item.img" alt="Image" fit="cover" :min-scale=0.1 />
+        <el-image :src="item.img" alt="Image" fit="cover" :min-scale=0.1/>
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -46,24 +46,24 @@ const carouselItems = [
 </template>
 
 <style scoped>
-  .carousel-container {
-    width: 100%;
-    height: 100%;
-  }
+.carousel-container {
+  width: 100%;
+  height: 100%;
+}
 
-  .el-carousel {
-    width: 100%;
-    height: 100%;
-  }
+.el-carousel {
+  width: 100%;
+  height: 100%;
+}
 
-  .el-carousel__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.el-carousel__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .el-image {
-    height: 80%;
-    border-radius: 6%;
-  }
+.el-image {
+  height: 80%;
+  border-radius: 6%;
+}
 </style>

@@ -16,52 +16,51 @@ import singerP7 from '@/assets/歌手/p7.png';
 import singerP8 from '@/assets/歌手/p8.png';
 
 
-
 const songLists = [
-  { img: songListP1, title: '推荐歌单1', description: '描述信息1' },
-  { img: songListP2, title: '推荐歌单2', description: '描述信息2' },
-  { img: songListP3, title: '推荐歌单3', description: '描述信息3' },
-  { img: songListP4, title: '推荐歌单4', description: '描述信息4' },
-  { img: songListP5, title: '推荐歌单5', description: '描述信息5' },
+  {img: songListP1, title: '推荐歌单1', description: '描述信息1'},
+  {img: songListP2, title: '推荐歌单2', description: '描述信息2'},
+  {img: songListP3, title: '推荐歌单3', description: '描述信息3'},
+  {img: songListP4, title: '推荐歌单4', description: '描述信息4'},
+  {img: songListP5, title: '推荐歌单5', description: '描述信息5'},
 
 ];
 
 const singers = [
-  { img: singerP1, title: '热门歌手1', description: '描述信息1' },
-  { img: singerP2, title: '热门歌手2', description: '描述信息2' },
-  { img: singerP3, title: '热门歌手3', description: '描述信息3' },
-  { img: singerP4, title: '热门歌手4', description: '描述信息4' },
-  { img: singerP5, title: '热门歌手5', description: '描述信息5' },
-  { img: singerP6, title: '热门歌手6', description: '描述信息6' },
-  { img: singerP7, title: '热门歌手7', description: '描述信息7' },
-  { img: singerP8, title: '热门歌手8', description: '描述信息8' },
+  {img: singerP1, title: '热门歌手1', description: '描述信息1'},
+  {img: singerP2, title: '热门歌手2', description: '描述信息2'},
+  {img: singerP3, title: '热门歌手3', description: '描述信息3'},
+  {img: singerP4, title: '热门歌手4', description: '描述信息4'},
+  {img: singerP5, title: '热门歌手5', description: '描述信息5'},
+  {img: singerP6, title: '热门歌手6', description: '描述信息6'},
+  {img: singerP7, title: '热门歌手7', description: '描述信息7'},
+  {img: singerP8, title: '热门歌手8', description: '描述信息8'},
 
 ];
 
 const hotBoard = [
-  { img: songListP1, title: '热门歌曲1', singer: "歌手1", description: '描述信息1' },
-  { img: songListP2, title: '热门歌曲2', singer: "歌手2", description: '描述信息2' },
-  { img: songListP3, title: '热门歌曲3', singer: "歌手3", description: '描述信息3' },
-  { img: songListP4, title: '热门歌曲4', singer: "歌手4", description: '描述信息4' },
-  { img: songListP5, title: '热门歌曲5', singer: "歌手5", description: '描述信息5' },
+  {img: songListP1, title: '热门歌曲1', singer: "歌手1", description: '描述信息1'},
+  {img: songListP2, title: '热门歌曲2', singer: "歌手2", description: '描述信息2'},
+  {img: songListP3, title: '热门歌曲3', singer: "歌手3", description: '描述信息3'},
+  {img: songListP4, title: '热门歌曲4', singer: "歌手4", description: '描述信息4'},
+  {img: songListP5, title: '热门歌曲5', singer: "歌手5", description: '描述信息5'},
 
 ];
 
 const newBoard = [
-  { img: songListP1, title: '新歌榜单1', singer: '歌手1', description: '描述信息1' },
-  { img: songListP2, title: '新歌榜单2', singer: '歌手2', description: '描述信息2' },
-  { img: songListP3, title: '新歌榜单3', singer: '歌手3', description: '描述信息3' },
-  { img: songListP4, title: '新歌榜单4', singer: '歌手4', description: '描述信息4' },
-  { img: songListP5, title: '新歌榜单5', singer: '歌手5', description: '描述信息5' },
+  {img: songListP1, title: '新歌榜单1', singer: '歌手1', description: '描述信息1'},
+  {img: songListP2, title: '新歌榜单2', singer: '歌手2', description: '描述信息2'},
+  {img: songListP3, title: '新歌榜单3', singer: '歌手3', description: '描述信息3'},
+  {img: songListP4, title: '新歌榜单4', singer: '歌手4', description: '描述信息4'},
+  {img: songListP5, title: '新歌榜单5', singer: '歌手5', description: '描述信息5'},
 
 ];
 
 const surgeBoard = [
-  { img: songListP1, title: '飙升榜单1', singer: '歌手1', description: '描述信息1' },
-  { img: songListP2, title: '飙升榜单2', singer: '歌手2', description: '描述信息2' },
-  { img: songListP3, title: '飙升榜单3', singer: '歌手3', description: '描述信息3' },
-  { img: songListP4, title: '飙升榜单4', singer: '歌手4', description: '描述信息4' },
-  { img: songListP5, title: '飙升榜单5', singer: '歌手5', description: '描述信息5' },
+  {img: songListP1, title: '飙升榜单1', singer: '歌手1', description: '描述信息1'},
+  {img: songListP2, title: '飙升榜单2', singer: '歌手2', description: '描述信息2'},
+  {img: songListP3, title: '飙升榜单3', singer: '歌手3', description: '描述信息3'},
+  {img: songListP4, title: '飙升榜单4', singer: '歌手4', description: '描述信息4'},
+  {img: songListP5, title: '飙升榜单5', singer: '歌手5', description: '描述信息5'},
 
 ];
 
@@ -77,7 +76,7 @@ const backgroundColor = "rgba(150, 150, 150, 1)";
       </div>
       <div class="recommend-song-list-content">
         <div v-for="(item, index) in songLists" :key="index" class="song-list-div">
-          <img :src="item.img" alt="Song List Image" class="song-list-image" />
+          <img :src="item.img" alt="Song List Image" class="song-list-image"/>
           <h4>{{ item.title }}</h4>
           <p>{{ item.description }}</p>
         </div>
@@ -89,7 +88,7 @@ const backgroundColor = "rgba(150, 150, 150, 1)";
       </div>
       <div class="recommend-singer-content">
         <div v-for="(item, index) in singers" :key="index" class="singer-div">
-          <img :src="item.img" alt="Singer Image" class="singer-image" />
+          <img :src="item.img" alt="Singer Image" class="singer-image"/>
           <h4>{{ item.title }}</h4>
           <p>{{ item.description }}</p>
         </div>

@@ -145,8 +145,8 @@ const backgroundColor = "rgba(211, 211, 211, 1)";
   width: 100%;
 
   /*不显示滚动条*/
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .song-list-div {
@@ -156,6 +156,8 @@ const backgroundColor = "rgba(211, 211, 211, 1)";
   align-items: center;
 
   margin: 5% 0 5% 10%;
+
+  gap: 5%;
 
 }
 

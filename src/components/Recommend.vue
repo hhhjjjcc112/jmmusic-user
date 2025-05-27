@@ -14,6 +14,7 @@ import singerP5 from '@/assets/歌手/p5.png';
 import singerP6 from '@/assets/歌手/p6.png';
 import singerP7 from '@/assets/歌手/p7.png';
 import singerP8 from '@/assets/歌手/p8.png';
+import {colorStyle} from "@/style/index.js";
 
 
 const songLists = [
@@ -64,42 +65,52 @@ const surgeBoard = [
 
 ];
 
-const backgroundColor = "rgba(150, 150, 150, 1)";
+const backgroundColor = colorStyle.value.light1;
 
 </script>
 
 <template>
+  <!-- 推荐部分 -->
   <div class="recommend">
+    <!-- 推荐歌单 -->
     <div class="recommend-song-list">
-      <div class="recommend-song-list-title">
-        <h1>推荐歌单</h1>
-      </div>
+      <!-- 标题 -->
+      <div class="recommend-song-list-title"><h1>推荐歌单</h1></div>
+      <!-- 歌单内容 -->
       <div class="recommend-song-list-content">
+        <!-- 歌单列表 -->
         <div v-for="(item, index) in songLists" :key="index" class="song-list-div">
+          <!-- 歌单图片 -->
           <img :src="item.img" alt="Song List Image" class="song-list-image"/>
+          <!-- 歌单标题和描述 -->
           <h4>{{ item.title }}</h4>
           <p>{{ item.description }}</p>
         </div>
       </div>
     </div>
+    <!-- 推荐歌手 -->
     <div class="recommend-singer">
-      <div class="recommend-singer-title">
-        <h1>热门歌手</h1>
-      </div>
+      <!-- 标题 -->
+      <div class="recommend-singer-title"><h1>热门歌手</h1></div>
+      <!-- 歌手内容 -->
       <div class="recommend-singer-content">
+        <!-- 歌手列表 -->
         <div v-for="(item, index) in singers" :key="index" class="singer-div">
           <img :src="item.img" alt="Singer Image" class="singer-image"/>
           <h4>{{ item.title }}</h4>
           <p>{{ item.description }}</p>
         </div>
       </div>
-
     </div>
+    <!-- 音乐排行榜 -->
     <div class="recommend-rank">
+      <!-- 标题 -->
       <div class="recommend-rank-title">
         <h1>音乐排行榜</h1>
       </div>
+      <!-- 排行榜 -->
       <div class="rank-board-div">
+        <!-- 热歌榜 -->
         <div class="hot-board">
           <h1>热歌榜</h1>
           <div class="hot-board-content">
@@ -108,6 +119,7 @@ const backgroundColor = "rgba(150, 150, 150, 1)";
             </div>
           </div>
         </div>
+        <!-- 新歌榜 -->
         <div class="new-board">
           <h1>新歌榜</h1>
           <div class="new-board-content">
@@ -115,8 +127,8 @@ const backgroundColor = "rgba(150, 150, 150, 1)";
               <p>{{ index + 1 }}. {{ item.description }} {{ item.singer }}</p>
             </div>
           </div>
-
         </div>
+        <!-- 飙升榜 -->
         <div class="surge-board">
           <h1>飙升榜</h1>
           <div class="surge-board-content">

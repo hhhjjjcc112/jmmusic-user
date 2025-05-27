@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory, useRouter} from "vue-router";
 import MainPage from "@/pages/MainPage.vue";
 
-const routes = [
+const index = [
     {
         path: "/",
         name: "home",
@@ -11,7 +11,7 @@ const routes = [
 
 let router = createRouter({
     history: createWebHistory(),
-    routes,
+    routes: index,
 })
 
 

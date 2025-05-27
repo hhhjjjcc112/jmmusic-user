@@ -3,12 +3,12 @@
 import backGround from '@/assets/mainpage-bg.png';
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
-import LeftNav from "@/components/LeftNav.vue";
+import SideBar from "@/components/SideBar.vue";
+import {colorStyle} from "@/style/index.js";
 
-let backgroundColor = "rgba(175, 175, 175, 1)";
+let backgroundColor = colorStyle.value.main_color;
 
 let backgroundImage = `url(${backGround})`;
-
 
 </script>
 
@@ -17,25 +17,20 @@ let backgroundImage = `url(${backGround})`;
     <!--  圆角  -->
     <div class="inner_border">
       <!-- 头部  -->
-      <div class="div-header">
-        <Header/>
-      </div>
+      <div class="div-header"><Header/></div>
       <!--  中间内容  -->
       <div class="page-center">
         <!-- 左侧导航栏  -->
-        <div class="div-left-nav">
-          <LeftNav/>
-        </div>
+        <div class="div-left-nav"><side-bar/></div>
         <div class="content">
 
+          <!-- 中间内容区域  -->
           <slot></slot>
 
         </div>
       </div>
       <!-- 底部  -->
-      <div class="div-footer">
-        <Footer/>
-      </div>
+      <div class="div-footer"><Footer/></div>
     </div>
   </div>
 </template>

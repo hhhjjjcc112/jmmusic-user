@@ -34,10 +34,14 @@ const carouselItems = [
 
 <template>
 
+  <!-- 顶层容器 -->
   <div class="carousel-container">
+    <!-- 走马灯组件 -->
     <el-carousel :interval=5000 autoplay arrow="always" direction="horizontal" type="card">
+      <!-- 走马灯项 -->
       <el-carousel-item v-for="item in carouselItems" :key="item">
-        <el-image :src="item.img" alt="Image" fit="cover" :min-scale=0.1/>
+        <!-- 图片展示 -->
+        <el-image :src="item.img" alt="Image" fit="cover" :min-scale=0.1 />
       </el-carousel-item>
     </el-carousel>
   </div>

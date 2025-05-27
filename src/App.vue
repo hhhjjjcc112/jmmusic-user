@@ -1,12 +1,16 @@
 <script setup>
 
 import MainPage from "@/pages/MainPage.vue";
+import SongLists from "@/pages/SongLists.vue";
+import SingerInfo from "@/pages/SingerInfo.vue";
 
 </script>
 
 <template>
   <div id="app1">
-    <MainPage></MainPage>
+<!--    <MainPage />-->
+<!--    <SongLists />-->
+    <SingerInfo />
   </div>
 </template>
 

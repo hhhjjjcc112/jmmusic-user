@@ -7,13 +7,13 @@ import MainPageTemplate from "@/components/MainPageTemplate.vue";
 </script>
 
 <template>
-  <MainPageTemplate>
+  <main-page-template>
     <!-- 轮播图  -->
-    <div><PicMarquee/></div>
+    <div><pic-marquee/></div>
 
     <!-- 推荐  -->
-    <div><Recommend/></div>
-  </MainPageTemplate>
+    <div><recommend/></div>
+  </main-page-template>
 
 </template>
 

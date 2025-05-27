@@ -1,10 +1,11 @@
 <script setup>
 
 import img1 from '@/assets/歌手/p1.png';
+import {colorStyle} from "@/style/index.js";
 
 let example_avatar = img1;
 
-const backgroundColor = "rgba(211, 211, 211, 0.9)";
+const backgroundColor = colorStyle.value.light1;
 
 </script>
 

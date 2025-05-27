@@ -12,6 +12,7 @@ import cover7 from "@/assets/专辑/p7.png";
 import cover8 from "@/assets/专辑/p8.png";
 import cover9 from "@/assets/专辑/p9.png";
 import cover10 from "@/assets/专辑/p10.png";
+import {colorStyle} from "@/style/index.js";
 
 const songLists = [
   {img: cover1, title: '我的歌单1', description: '描述信息1'},
@@ -27,53 +28,63 @@ const songLists = [
 ];
 
 
-const backgroundColor = "rgba(211, 211, 211, 1)";
+const backgroundColor = colorStyle.value.light1;
 
 </script>
 
 <template>
+  <!-- 左侧导航栏 -->
   <div class="left-nav">
+    <!-- 首页类型 -->
     <div class="nav-type-home nav-type">
+      <!-- 首页 -->
       <div class="nav-home nav-item">
         <el-icon><House/></el-icon>
         <h4>首页</h4>
       </div>
     </div>
+    <!-- 发现类型 -->
     <div class="nav-type-find nav-type">
       <p>发现</p>
+      <!-- 搜索、歌单、歌手、收藏 -->
       <div class="nav-search nav-item">
         <el-icon><Search/></el-icon>
         <h4>搜索</h4>
       </div>
-
+      <!-- 歌单 -->
       <div class="nav-songlist nav-item">
         <el-icon><List/></el-icon>
         <h4>歌单</h4>
       </div>
-
+      <!-- 歌手 -->
       <div class="nav-singer nav-item">
         <el-icon><Mic/></el-icon>
         <h4>歌手</h4>
       </div>
-
+      <!-- 收藏 -->
       <div class="nav-favorite nav-item">
         <el-icon><Star/></el-icon>
         <h4>收藏</h4>
       </div>
     </div>
+    <!-- 设置类型 -->
     <div class="nav-type-settings nav-type">
       <p>设置</p>
+      <!-- 设置 -->
       <div class="nav-settings nav-item">
         <el-icon><Setting/></el-icon>
         <h4>设置</h4>
       </div>
+      <!-- 主题 -->
       <div class="nav-theme nav-item">
         <el-icon><ElementPlus/></el-icon>
         <h4>主题</h4>
       </div>
     </div>
+    <!-- 我的歌单 -->
     <div class="nav-my-song-list">
       <p>我的歌单</p>
+      <!-- 歌单列表容器 -->
       <div class="song-list-container">
         <div v-for="(item, index) in songLists" :key="index" class="song-list-div">
           <img :src="item.img" alt="Song List Image" class="song-list-image"/>

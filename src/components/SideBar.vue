@@ -38,48 +38,50 @@ const backgroundColor = colorStyle.value.light1;
     <!-- 首页类型 -->
     <div class="nav-type-home nav-type">
       <!-- 首页 -->
-      <div class="nav-home nav-item">
+      <router-link class="nav-home nav-item" to="/">
         <el-icon><House/></el-icon>
         <h4>首页</h4>
-      </div>
+        <router-link to="/home" class="nav-link"></router-link>
+      </router-link>
     </div>
     <!-- 发现类型 -->
     <div class="nav-type-find nav-type">
       <p>发现</p>
       <!-- 搜索、歌单、歌手、收藏 -->
-      <div class="nav-search nav-item">
+      <router-link class="nav-search nav-item" to="/search">
         <el-icon><Search/></el-icon>
         <h4>搜索</h4>
-      </div>
+
+      </router-link>
       <!-- 歌单 -->
-      <div class="nav-songlist nav-item">
+      <router-link to="/songlists" class="nav-songlist nav-item">
         <el-icon><List/></el-icon>
         <h4>歌单</h4>
-      </div>
+      </router-link>
       <!-- 歌手 -->
-      <div class="nav-singer nav-item">
+      <router-link class="nav-singer nav-item" to="/singers">
         <el-icon><Mic/></el-icon>
         <h4>歌手</h4>
-      </div>
+      </router-link>
       <!-- 收藏 -->
-      <div class="nav-favorite nav-item">
+      <router-link class="nav-favorite nav-item" to="/collections">
         <el-icon><Star/></el-icon>
         <h4>收藏</h4>
-      </div>
+      </router-link>
     </div>
     <!-- 设置类型 -->
     <div class="nav-type-settings nav-type">
       <p>设置</p>
       <!-- 设置 -->
-      <div class="nav-settings nav-item">
+      <router-link class="nav-settings nav-item" to="/settings">
         <el-icon><Setting/></el-icon>
         <h4>设置</h4>
-      </div>
+      </router-link>
       <!-- 主题 -->
-      <div class="nav-theme nav-item">
+      <router-link class="nav-theme nav-item" to="/settings">
         <el-icon><ElementPlus/></el-icon>
         <h4>主题</h4>
-      </div>
+      </router-link>
     </div>
     <!-- 我的歌单 -->
     <div class="nav-my-song-list">
@@ -119,6 +121,8 @@ const backgroundColor = colorStyle.value.light1;
   flex-direction: row;
   align-items: center;
   margin: 5% 0 5% 10%;
+  text-decoration: none;
+  color: inherit; /* 继承父元素颜色 */
 }
 
 .nav-item:hover {

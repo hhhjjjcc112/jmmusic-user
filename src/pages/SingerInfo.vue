@@ -14,8 +14,8 @@ watch(displayType, (newValue) => {
   // 这里可以添加逻辑来切换显示的内容
 });
 
-let radioButtonColor = colorStyle.value.light1;
-let displayContentBG = colorStyle.value.light1;
+let radioButtonColor = colorStyle.value.dark1;
+let displayContentBG = colorStyle.value.dark1;
 
 </script>
 
@@ -63,13 +63,12 @@ let displayContentBG = colorStyle.value.light1;
 
 <style scoped>
 .singer-info-root {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  margin: 4% 5% 3% 5%;
+  gap: 3vh;
   align-items: center;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: calc(100% - 5% - 5%);
 }
 
 .singer-info-header {
@@ -77,7 +76,6 @@ let displayContentBG = colorStyle.value.light1;
   flex-direction: row;
   align-items: center;
   gap: 10%;
-  margin: 2% 0 2% 0;
   width: 100%;
 }
 
@@ -100,7 +98,6 @@ let displayContentBG = colorStyle.value.light1;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 2%;
 }
 
 .singer-display-content {

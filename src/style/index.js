@@ -48,8 +48,8 @@ let colorStyleDict = {
 }
 
 // 修改的不是结构体内部, 而是结构体本身, 所以使用ref
-export let colorStyle = ref(redColorStyle);
-// export let colorStyle = ref(grayColorStyle); // 默认使用灰色样式
+// export let colorStyle = ref(redColorStyle);
+export let colorStyle = ref(grayColorStyle); // 默认使用灰色样式
 // export let colorStyle = ref(blueColorStyle);
 // export let colorStyle = ref(greenColorStyle);
 

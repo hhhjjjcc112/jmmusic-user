@@ -15,6 +15,7 @@ import singerP6 from '@/assets/歌手/p6.png';
 import singerP7 from '@/assets/歌手/p7.png';
 import singerP8 from '@/assets/歌手/p8.png';
 import {colorStyle} from "@/style/index.js";
+import MultiLineList from "@/components/MultiLineList.vue";
 
 
 const songLists = [
@@ -77,30 +78,36 @@ const backgroundColor = colorStyle.value.light1;
       <!-- 标题 -->
       <div class="recommend-song-list-title"><h1>推荐歌单</h1></div>
       <!-- 歌单内容 -->
-      <div class="recommend-song-list-content">
+      <multi-line-list class="recommend-song-list-content" :items="songLists">
         <!-- 歌单列表 -->
-        <div v-for="(item, index) in songLists" :key="index" class="song-list-div">
-          <!-- 歌单图片 -->
-          <img :src="item.img" alt="Song List Image" class="song-list-image"/>
-          <!-- 歌单标题和描述 -->
-          <h4>{{ item.title }}</h4>
-          <p>{{ item.description }}</p>
-        </div>
-      </div>
+        <template #item="{ item }">
+          <div class="song-list-div">
+            <!-- 歌单图片 -->
+            <img :src="item.img" alt="Song List Image" class="song-list-image"/>
+            <!-- 歌单标题和描述 -->
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+          </div>
+        </template>
+
+      </multi-line-list>
     </div>
     <!-- 推荐歌手 -->
     <div class="recommend-singer">
       <!-- 标题 -->
       <div class="recommend-singer-title"><h1>热门歌手</h1></div>
       <!-- 歌手内容 -->
-      <div class="recommend-singer-content">
+      <multi-line-list class="recommend-singer-content" :items="singers">
         <!-- 歌手列表 -->
-        <div v-for="(item, index) in singers" :key="index" class="singer-div">
-          <img :src="item.img" alt="Singer Image" class="singer-image"/>
-          <h4>{{ item.title }}</h4>
-          <p>{{ item.description }}</p>
-        </div>
-      </div>
+        <template #item="{ item }">
+          <div class="singer-div">
+            <img :src="item.img" alt="Singer Image" class="singer-image"/>
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+          </div>
+        </template>
+
+      </multi-line-list>
     </div>
     <!-- 音乐排行榜 -->
     <div class="recommend-rank">
@@ -161,14 +168,6 @@ const backgroundColor = colorStyle.value.light1;
   height: 100%;
 }
 
-.recommend-song-list-content, .recommend-singer-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-
 .song-list-div {
   display: flex;
   flex-direction: column;
@@ -176,8 +175,6 @@ const backgroundColor = colorStyle.value.light1;
   align-items: center;
 
   padding: 10px 0 5px 0;
-
-  width: 25%;
 }
 
 .song-list-image {
@@ -201,8 +198,6 @@ const backgroundColor = colorStyle.value.light1;
   align-items: center;
 
   padding: 10px 0 5px 0;
-
-  width: 20%;
 }
 
 .singer-image {

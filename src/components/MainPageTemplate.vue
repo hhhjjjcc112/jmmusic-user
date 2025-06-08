@@ -59,17 +59,14 @@ let backgroundImage = `url(${backGround})`;
 .page-center {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 10% - 10%); /* 减去头部和底部的高度 */
   overflow: hidden;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  height: 100%;
   overflow-y: auto;
-
-  padding-bottom: 3%; /*给底部留一点距离*/
 
   background-color: v-bind(backgroundColor);
 
@@ -81,24 +78,15 @@ let backgroundImage = `url(${backGround})`;
 .div-header {
   width: 100%;
   height: 10%;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .div-footer {
   width: 100%;
   height: 10%;
-  position: sticky;
-  bottom: 0;
-  z-index: 100;
 }
 
 .div-left-nav {
   width: 15%;
   height: 100%;
-  position: sticky;
-  left: 0;
-  z-index: 100;
 }
 </style>

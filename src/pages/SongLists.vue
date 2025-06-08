@@ -7,6 +7,7 @@ import img1 from "@/assets/专辑/p1.png";
 import img2 from "@/assets/专辑/p2.png";
 import img3 from "@/assets/专辑/p3.png";
 import img12 from "@/assets/专辑/p12.jpg";
+import MultiLineList from "@/components/MultiLineList.vue";
 
 let recommendSongListTitle = ref("推荐摇滚歌单");
 
@@ -66,24 +67,28 @@ let recommendSongLists = reactive([
       <!-- 最近播放的歌单 -->
       <div class="recent-song-list">
         <h1>最近播放的歌单</h1>
-        <div class="song-list-container">
-          <div class="recent-song-list-item" v-for="(item, index) in recentSongLists" :key="index">
-            <img :src="item.img" alt="Song List Image" class="song-list-image"/>
-            <h4>{{ item.title }}</h4>
-            <p>{{ item.description }}</p>
-          </div>
-        </div>
+        <multi-line-list class="song-list-container" :items="recentSongLists" component-num=4>
+          <template #item="{ item }">
+            <div class="recent-song-list-item">
+              <img :src="item.img" alt="Song List Image" class="song-list-image"/>
+              <h4>{{ item.title }}</h4>
+              <p>{{ item.description }}</p>
+            </div>
+          </template>
+        </multi-line-list>
       </div>
       <!-- 推荐歌单 -->
       <div class="recommend-song-list">
         <h1>{{recommendSongListTitle}}</h1>
-        <div class="song-list-container">
-          <div class="recommend-song-list-item" v-for="(item, index) in recommendSongLists" :key="index">
-            <img :src="item.img" alt="Song List Image" class="song-list-image"/>
-            <h4>{{ item.title }}</h4>
-            <p>{{ item.description }}</p>
-          </div>
-        </div>
+        <multi-line-list class="song-list-container" :items="recentSongLists" component-num=4>
+          <template #item="{ item }">
+            <div class="recommend-song-list-item">
+              <img :src="item.img" alt="Song List Image" class="song-list-image"/>
+              <h4>{{ item.title }}</h4>
+              <p>{{ item.description }}</p>
+            </div>
+          </template>
+        </multi-line-list>
       </div>
     </div>
 
@@ -94,36 +99,26 @@ let recommendSongLists = reactive([
 <style scoped>
 
 .song-list-root {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  margin: 4% 5% 3% 5%;
+  gap: 4vh;
   align-items: center;
 }
 
 .recent-song-list, .recommend-song-list {
   display: flex;
   flex-direction: column;
-  margin: 0 2% 0 2%;
-  width: calc(100% - 4%);
+  width: 100%;
 }
 
-.recent-song-list, .recommend-song-list h1 {
-  margin: 0;
+.recent-song-list h1, .recommend-song-list h1 {
   padding: 10px 0;
 }
 
-.song-list-container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-}
 
 .recent-song-list-item, .recommend-song-list-item {
-  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;

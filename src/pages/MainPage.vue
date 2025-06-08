@@ -11,13 +11,17 @@ import MainPageTemplate from "@/components/MainPageTemplate.vue";
     <!-- 轮播图  -->
     <div><pic-marquee/></div>
 
+
     <!-- 推荐  -->
-    <div><recommend/></div>
+    <div class="main-page-bottom"><recommend/></div>
+
   </main-page-template>
 
 </template>
 
 <style scoped>
-
+.main-page-bottom {
+  margin-bottom: 3%;
+}
 </style>
 
